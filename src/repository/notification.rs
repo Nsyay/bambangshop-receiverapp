@@ -11,5 +11,9 @@ lazy_static! {
 }
 
 impl NotificationRepository{
-    
+    pub fn add (notification: Notification)->Notification{
+        NOTIFICATIONS.write().unwrap()
+            .push(notification.clone());
+        return notification;
+    }
 }
