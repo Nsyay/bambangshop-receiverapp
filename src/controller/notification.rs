@@ -1,16 +1,14 @@
-use std::thread;
+use rocket::serde::json::Json;
 
-use rocket::http::Status;
-use rocket::log;
-use rocket::serde::json::to_string;
-use rocket::tokio;
-
-use bambangshop_receiver::{APP_CONFIG, REQWEST_CLIENT, Result, compose_error_response};
+use bambangshop_receiver::Result;
 use crate::model::notification::Notification;
-use crate::model::subscriber:: SubscriberRequest;
-use crate::repository::notification::NotificationRepository;
+use crate::model::subscriber::SubscriberRequest;
+use crate::service::notification::NotificationService;
 
-pub struct NotificationService;
-
-impl NotificationService {
+#[get("/subscribe/<product_type>")]
+pub fn subscribe(product_type: &str)->Result<Json<SubscriberRequest>>{
+    return match NotificationService::subscribe(product_type){
+        Ok(f) => Ok(Json::from(f)),
+        Err(e) => Err(e)
+    }
 }
