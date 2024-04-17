@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Commit: `Implement receive_notification function in Notification service.`
+    -   [x] Commit: `Implement receive function in Notification controller.`
+    -   [x] Commit: `Implement list_messages function in Notification service.`
+    -   [x] Commit: `Implement list function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -90,3 +90,8 @@ This is the place for you to write reflections:
 2. Strict safe guarantee and ownership pada rust menjadikan static variables lebih kompleks dan diatur ketat dibanding di Java. Hal ini menguntungkan terutama untuk program yang menggunakan multi-threading karena meningkatkan keamanan data yang dapat di akses oleh banyak thread sekaligus
 
 #### Reflection Subscriber-2
+1. belum, namun setelah saya baca lib.rs berisi definisi fungsi dan konfigurasi untuk berbagai library eksternal seperti `lazy_static`, `rocket`, `reqwest`
+
+2. Ya, karena observer design pattern memungkinkan pengelolaan subscriber dengan cara yang fleksibel dan dinamis. Subscriber memiliki dependensi yang rendah dengan subject sehingga memudahkan penambahan subscriber baru tanpa mengubah kode yang sudah ada
+
+3. Ya, menggunakan postman untuk melakukan testing sangat berguna. Terlebih lagi dengan adanya Postmen collection yang berisi data asli dari web ini
