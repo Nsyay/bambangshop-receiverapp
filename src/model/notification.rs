@@ -18,7 +18,7 @@ impl Display for Notification{
             return write!(f,
                 "Hello {}, let's try our new {} product: {}, only in BambangShop! Check it out: {}",
                 self.subscriber_name, self.product_type.to_lowercase(), self.product_title, self.product_url )
-        }else if (self.status.to_uppercase().eq("DELETED")){
+        }else if self.status.to_uppercase().eq("DELETED") {
             return write!(f,
                 "Hello {}, we informed that out {} product called {} already sold out...",
                 self.subscriber_name, self.product_type.to_lowercase(), self.product_title);
